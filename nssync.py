@@ -13,13 +13,17 @@ try:
     print("#"*20)
 
     try:
-        with connection.cursor() as cur:
+        
+        list_row = ()
+        with connection.cursor() as cursor:
             select_zones_table = "SELECT id,notified_serial FROM domains;"
-            cur.execute(select_zones_table)
+            cursor.execute(select_zones_table)
 
             rows = cursor.fetchall()
             for row in rows:
-                print(row)
+                list_row.append(row)
+                #print(row)
+                print(list_row)
                 print("@"*20)
 
     finally:
