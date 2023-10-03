@@ -27,6 +27,6 @@ try:
         print("connection closed")
         print("#"*20)
 
-except Exceptions as ex:
+except Exception as ex:
     print("connections resused")
     pint(ex)
