@@ -29,4 +29,4 @@ try:
 
 except Exception as ex:
     print("connections resused")
-    pint(ex)
+    print(ex)
