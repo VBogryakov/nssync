@@ -15,7 +15,7 @@ try:
 
     try:
         
-        list_row = ()
+        list_row = []
         with connection.cursor() as cursor:
             select_zones_table = "SELECT id,notified_serial FROM domains;"
             cursor.execute(select_zones_table)
